@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex flex-col gap-3 p-3">
+  <div class="h-screen flex flex-col gap-3 py-3">
     <Search />
     <div class="flex-1 overflow-y-scroll">
       <ProductGridView :productList="productList" />

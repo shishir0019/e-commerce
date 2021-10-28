@@ -3,7 +3,7 @@
     <div class="flex-1 col-span-3">
       <ProductGallery :productList="productList" />
     </div>
-    <div class="t" style="width: 400px">
+    <div style="width: 400px">
       <Cart :cartList="carts"/>
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
   components: { Search, ProductGallery, Cart },
   computed: {
     ...mapGetters({
-      productList: 'product/products',
+      productList: 'product/getFilteredProducts',
       carts: 'cart/carts',
     })
   }
