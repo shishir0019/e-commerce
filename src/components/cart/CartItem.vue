@@ -1,14 +1,18 @@
 <template>
   <div class="root">
-    <div class="w-8 h-8 rounded-full flex justify-center items-center border"><img :src="icons.chevron" alt=""></div>
-    <div class="px-1 flex-grow text-sm">{{ item.name }}</div>
-    <div class="flex items-center">
-      <button class="fab" @click="decrease(item.id)">-</button>
-      <span class="px-1 w-10 text-right text-sm">{{ item.quantity }}</span>
-      <button class="fab" @click="increase(item.id)">+</button>
+    <div class="flex items-start">
+      <div class="w-4 h-4 rounded-full flex justify-center items-center border"><img :src="icons.chevron" alt=""></div>
     </div>
-    <div class="text-right w-20">{{ currency }}{{ item.price * item.quantity }}</div>
-    <button @click="remove(item)" class="hover:opacity-50"><img :src="icons.delete" alt=""></button>
+    <div class="px-1 flex-grow text-xs">{{ item.name }}</div>
+    <div class="flex self-center gap-1">
+      <div class="self-center bg-gray-200 rounded-full flex items-center">
+        <button class="fab" @click="decrease(item.id)">-</button>
+        <span class="px-1 w-8 text-right text-xs">{{ item.quantity }}</span>
+        <button class="fab" @click="increase(item.id)">+</button>
+      </div>
+      <div class="self-center w-14 text-xs text-right">{{ currency }}{{ item.price * item.quantity }}</div>
+      <button @click="remove(item)" class="w-4 self-center hover:opacity-50"><img :src="icons.delete" alt=""></button>
+    </div>
   </div>
 </template>
 
@@ -42,9 +46,9 @@ export default {
 
 <style scoped>
 .root{
-  @apply flex items-center gap-x-2 px-3 py-1 text-gray-600 text-sm border-b;
+  @apply flex gap-x-2 px-2 py-1 text-gray-600 text-sm border-b;
 }
 .fab {
-    @apply w-6 h-6 flex justify-center items-center border rounded-full hover:bg-gray-200 cursor-pointer;
+    @apply w-6 h-6 flex justify-center items-center border rounded-full bg-gray-100 hover:bg-gray-300 cursor-pointer;
 }
 </style>
