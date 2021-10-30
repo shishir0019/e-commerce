@@ -11,8 +11,8 @@
 
 <script>
 import Search from "@/components/Search";
-import ProductGallery from "@/components/ProductGallery";
-import Cart from "@/components/Cart";
+import ProductGallery from "@/components/product/ProductGallery";
+import Cart from "@/components/cart/Cart";
 import { mapGetters } from "vuex";
 export default {
   components: { Search, ProductGallery, Cart },

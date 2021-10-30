@@ -9,7 +9,7 @@
 
 <script>
 import Search from "@/components/Search";
-import ProductGridView from "@/components/ProductGridView";
+import ProductGridView from "@/components/product/ProductGridView";
 export default {
   props: {
     productList: {
